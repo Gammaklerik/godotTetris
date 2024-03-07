@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://demu81n75q5ii"]
+
+[ext_resource type="Script" path="res://block_controller.gd" id="1_kyh6u"]
+
+[node name="block_controller" type="Node"]
+script = ExtResource("1_kyh6u")
+
+[node name="fall_timer" type="Timer" parent="."]
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="timeout" from="fall_timer" to="." method="_on_fall_timer_timeout"]

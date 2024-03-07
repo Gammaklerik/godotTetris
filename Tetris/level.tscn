@@ -1,0 +1,305 @@
+[gd_scene load_steps=6 format=3 uid="uid://crx2xon544x1w"]
+
+[ext_resource type="PackedScene" uid="uid://demu81n75q5ii" path="res://block_controller.tscn" id="2_moa0c"]
+[ext_resource type="Texture2D" uid="uid://slb8m8quce30" path="res://assets/sprites/block.png" id="2_nmbck"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k0s57"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x638w"]
+size = Vector2(800, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ir2y"]
+size = Vector2(4e+07, 648)
+
+[node name="Level" type="Node"]
+
+[node name="block_controller" parent="." instance=ExtResource("2_moa0c")]
+
+[node name="floor" type="RigidBody2D" parent="."]
+position = Vector2(250, 650)
+physics_material_override = SubResource("PhysicsMaterial_k0s57")
+gravity_scale = 0.0
+lock_rotation = true
+max_contacts_reported = 10
+contact_monitor = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(0.00799561, 25.008)
+scale = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_x638w")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="floor"]
+position = Vector2(-174.992, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="floor"]
+position = Vector2(-124.992, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="floor"]
+position = Vector2(-74.992, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="floor"]
+position = Vector2(-24.992, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="floor"]
+position = Vector2(25.008, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="floor"]
+position = Vector2(75.008, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="floor"]
+position = Vector2(125.008, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="floor"]
+position = Vector2(175.008, 25.008)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="wall_left" type="Node2D" parent="."]
+position = Vector2(-326, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall_left"]
+position = Vector2(351, 323)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="wall_left"]
+position = Vector2(351, 223)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="wall_left"]
+position = Vector2(351, 423)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="wall_left"]
+position = Vector2(351, 373)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="wall_left"]
+position = Vector2(351, 273)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 73.0081)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, -26.9919)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D13" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 173.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 123.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 23.0081)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 573.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 473.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 673.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 623.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="wall_left"]
+position = Vector2(351.008, 523.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="wall_right" type="Node2D" parent="."]
+position = Vector2(-326, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="wall_right"]
+position = Vector2(801, 323)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="wall_right"]
+position = Vector2(801, 223)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="wall_right"]
+position = Vector2(801, 423)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="wall_right"]
+position = Vector2(801, 373)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="wall_right"]
+position = Vector2(801, 273)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 73.0081)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, -26.9919)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D13" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 173.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 123.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 23.0081)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 573.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 473.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 673.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 623.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="wall_right"]
+position = Vector2(801.008, 523.008)
+rotation = 1.5708
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("2_nmbck")
+metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(250, 324)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1e-05, 1)
+shape = SubResource("RectangleShape2D_5ir2y")
+
+[connection signal="body_entered" from="floor" to="block_controller" method="_on_floor_body_entered"]

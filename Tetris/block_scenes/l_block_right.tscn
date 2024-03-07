@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwqc3juq124v"]
+
+[ext_resource type="PackedScene" uid="uid://drqq45ywv5146" path="res://block_scenes/block_rb.tscn" id="1_4tu4d"]
+[ext_resource type="Texture2D" uid="uid://slb8m8quce30" path="res://assets/sprites/block.png" id="2_yfnwq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqed5"]
+size = Vector2(50, 50)
+
+[node name="block" instance=ExtResource("1_4tu4d")]
+
+[node name="block_col1" type="CollisionShape2D" parent="." index="0"]
+position = Vector2(-25, -75)
+shape = SubResource("RectangleShape2D_pqed5")
+
+[node name="block1" type="Sprite2D" parent="block_col1" index="0"]
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("2_yfnwq")
+metadata/_edit_lock_ = true
+
+[node name="block_col2" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(-25, -25)
+shape = SubResource("RectangleShape2D_pqed5")
+
+[node name="block2" type="Sprite2D" parent="block_col2" index="0"]
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("2_yfnwq")
+metadata/_edit_lock_ = true
+
+[node name="block_col3" type="CollisionShape2D" parent="." index="2"]
+position = Vector2(-25, 25)
+shape = SubResource("RectangleShape2D_pqed5")
+
+[node name="block3" type="Sprite2D" parent="block_col3" index="0"]
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("2_yfnwq")
+metadata/_edit_lock_ = true
+
+[node name="block_col4" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_pqed5")
+
+[node name="block4" type="Sprite2D" parent="block_col4" index="0"]
+scale = Vector2(1.5625, 1.5625)
+texture = ExtResource("2_yfnwq")
+metadata/_edit_lock_ = true
