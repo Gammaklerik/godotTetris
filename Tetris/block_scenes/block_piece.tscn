@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb8hc7jtsx77x"]
+
+[ext_resource type="Script" path="res://block_scenes/block_piece.gd" id="1_jwl1d"]
+[ext_resource type="Texture2D" uid="uid://slb8m8quce30" path="res://assets/sprites/block.png" id="1_unnw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5w7v8"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7sp88"]
+
+[node name="block_piece" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_5w7v8")
+script = ExtResource("1_jwl1d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(1.563, 1.563)
+texture = ExtResource("1_unnw7")
+metadata/_edit_lock_ = true
+
+[node name="block_raycast" type="ShapeCast2D" parent="."]
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_7sp88")
+target_position = Vector2(0, 250)

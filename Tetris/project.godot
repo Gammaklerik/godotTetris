@@ -22,6 +22,11 @@ window/size/viewport_height=650
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [input]
 
 shift_left={
