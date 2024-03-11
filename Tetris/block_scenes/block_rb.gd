@@ -11,4 +11,6 @@ func _on_body_entered(body):
 		#global_position.y = int(int(global_position.y) - (int(global_position.y) % 50))
 	#print("subtract: " + str(global_position.y))
 	block_land.emit()
+	collision_layer = 2
+	collision_mask = 2
 	name = "debris"

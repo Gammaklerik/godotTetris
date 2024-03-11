@@ -1,10 +1,9 @@
 extends CollisionShape2D
 
-# signal for returning raycast data
-
-func _ready():
-	pass
-
-func _process(delta):
-	print($block_raycast.get_collision_point(0))
-
+#signal shape_cast
+#
+#func _ready():
+#	shape_cast.connect(shape_casted)
+#
+#func shape_casted(normal: Vector2, collider: Node, collider_shape: int, self_shape: int):
+#	print(collider.name)

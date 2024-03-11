@@ -30,6 +30,7 @@ func new_block():
 	add_child(block)
 	block.global_position = Vector2(250, -50)
 	block.block_land.connect(_on_block_land)
+	$shapecast_corrector.remote_path(block.$)
 	$fall_timer.start()
 
 func _on_fall_timer_timeout():

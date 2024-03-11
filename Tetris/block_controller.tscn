@@ -7,5 +7,8 @@ script = ExtResource("1_kyh6u")
 
 [node name="fall_timer" type="Timer" parent="."]
 
+[node name="shapecast_corrector" type="RemoteTransform2D" parent="."]
+scale = Vector2(2.5, 2.5)
+
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="timeout" from="fall_timer" to="." method="_on_fall_timer_timeout"]
