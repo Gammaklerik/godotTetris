@@ -1,0 +1,18 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://l5l4ank1ejgo"]
+
+[ext_resource type="Texture2D" uid="uid://c35vjlgc43hyj" path="res://assets/sprites/tiles.png" id="1_pq1mf"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dc4mo"]
+texture = ExtResource("1_pq1mf")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+
+[resource]
+uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_dc4mo")
