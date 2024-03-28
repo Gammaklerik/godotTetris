@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhykwbi33k28c"]
+
+[ext_resource type="FontFile" uid="uid://i8se1bgmuane" path="res://assets/fonts/Workbench-Regular.ttf" id="1_0yijd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p1syj"]
+font = ExtResource("1_0yijd")
+font_color = Color(0, 0.776471, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4qi0r"]
+font = ExtResource("1_0yijd")
+font_color = Color(0, 0.776471, 0, 1)
+
+[node name="Level_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="score_label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 74.0
+offset_right = 71.0
+offset_bottom = 109.0
+text = "Score:
+0"
+label_settings = SubResource("LabelSettings_p1syj")
+horizontal_alignment = 1
+
+[node name="level_label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 66.0
+offset_bottom = 53.0
+text = "Level:
+1"
+label_settings = SubResource("LabelSettings_4qi0r")
+horizontal_alignment = 1

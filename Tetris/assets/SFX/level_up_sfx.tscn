@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://1332hvd4d5ff"]
+
+[ext_resource type="AudioStream" uid="uid://d220jt46tjjnx" path="res://assets/SFX/four_lines.ogg" id="1_wdfgk"]
+
+[node name="level_up_sfx" type="AudioStreamPlayer" groups=["SFX"]]
+stream = ExtResource("1_wdfgk")

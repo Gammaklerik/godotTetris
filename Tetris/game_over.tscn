@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5rexhwjrgrbg"]
+
+[ext_resource type="Script" path="res://game_over.gd" id="1_v8eid"]
+[ext_resource type="FontFile" uid="uid://i8se1bgmuane" path="res://assets/fonts/Workbench-Regular.ttf" id="1_wgwr4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v3uyn"]
+font = ExtResource("1_wgwr4")
+font_size = 43
+font_color = Color(0, 0.776471, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Game_Over_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v8eid")
+
+[node name="game_over" type="Label" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 15.0
+offset_right = 267.0
+offset_bottom = 59.0
+text = "Game Over"
+label_settings = SubResource("LabelSettings_v3uyn")
+
+[node name="restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 85.0
+offset_right = 235.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("1_wgwr4")
+theme_override_font_sizes/font_size = 25
+text = "Restart?"
+
+[node name="to_menu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 299.0
+offset_right = 161.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("1_wgwr4")
+theme_override_font_sizes/font_size = 20
+text = "Back to Menu"
+
+[node name="final_score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 60.0
+offset_right = 266.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("1_wgwr4")
+theme_override_font_sizes/font_size = 20
+text = "Score: "
+horizontal_alignment = 1
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 300.0
+offset_right = 291.0
+offset_bottom = 329.0
+theme_override_fonts/font = ExtResource("1_wgwr4")
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[node name="leaderboard_text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 127.0
+offset_right = 236.0
+offset_bottom = 298.0
+theme_override_fonts/normal_font = ExtResource("1_wgwr4")
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="to_menu" to="." method="_on_to_menu_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnmx7edl1q1r5"]
+
+[ext_resource type="AudioStream" uid="uid://c5htoaggn6jyv" path="res://assets/SFX/Dosi & Aisake - Cruising.mp3" id="1_cs3dx"]
+
+[node name="background_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_cs3dx")
+volume_db = -28.0
+autoplay = true

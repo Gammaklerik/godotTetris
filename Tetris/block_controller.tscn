@@ -1,9 +1,50 @@
-[gd_scene load_steps=2 format=3 uid="uid://demu81n75q5ii"]
+[gd_scene load_steps=2 format=3 uid="uid://ct3c2ea7nw15c"]
 
-[ext_resource type="Script" path="res://block_controller.gd" id="1_kyh6u"]
+[sub_resource type="GDScript" id="GDScript_tb40d"]
+script/source = "extends Node
+
+var block_list = [preload(\"res://block_scenes/line_block.tscn\"), preload(\"res://block_scenes/square_block.tscn\"), preload(\"res://block_scenes/l_block_right.tscn\"), preload(\"res://block_scenes/l_block_left.tscn\"), preload(\"res://block_scenes/squiggle_block_right.tscn\"), preload(\"res://block_scenes/squiggle_block_left.tscn\"), preload(\"res://block_scenes/t_block.tscn\")]
+
+var block
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+func _process(delta):
+	pass
+	#if block != null:
+	#	if Input.is_action_just_pressed(\"rotate\"):
+	#		block.rotation += deg_to_rad(90)
+	#	if Input.is_action_just_pressed(\"shift_left\"):
+	#		block.global_position += Vector2(-50, 0)
+	#	if Input.is_action_just_pressed(\"shift_right\"):
+	#		block.global_position += Vector2(50, 0)
+	#	if Input.is_action_just_pressed(\"shift_down\"):
+	#		block.global_position += Vector2(0, 50)
+	#	if Input.is_action_just_pressed(\"drop\"):
+	#		# Drop the block immediately down and place it on the map
+	#		pass
+
+#func new_block():
+#	block = block_list[randf_range(0, 6)].instantiate()
+#	add_child(block)
+#	block.global_position = Vector2(250, -50)
+#	block.block_land.connect(_on_block_land)
+#	$shapecast_corrector.remote_path(block.$)
+#	$fall_timer.start()
+#
+#func _on_fall_timer_timeout():
+#	block.global_position += Vector2(0, 50)
+#
+#func _on_block_land():
+#	block.block_land.disconnect(_on_block_land)
+#	$fall_timer.stop()
+#	new_block()
+"
 
 [node name="block_controller" type="Node"]
-script = ExtResource("1_kyh6u")
+script = SubResource("GDScript_tb40d")
 
 [node name="fall_timer" type="Timer" parent="."]
 

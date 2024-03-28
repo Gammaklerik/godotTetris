@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://2l72ro810r3o"]
+
+[ext_resource type="Script" path="res://options_menu.gd" id="1_0e3bv"]
+[ext_resource type="FontFile" uid="uid://i8se1bgmuane" path="res://assets/fonts/Workbench-Regular.ttf" id="2_k1u7s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pbky3"]
+font = ExtResource("2_k1u7s")
+font_size = 34
+outline_size = 1
+outline_color = Color(0, 0.776471, 0, 1)
+
+[node name="Options Menu" type="Control" node_paths=PackedStringArray("music_vol_slider", "sfx_vol_slider")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0e3bv")
+music_vol_slider = NodePath("music_vol_slider")
+sfx_vol_slider = NodePath("sfx_vol_slider")
+
+[node name="options" type="Label" parent="."]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 6.0
+offset_right = 228.0
+offset_bottom = 41.0
+text = "Options"
+label_settings = SubResource("LabelSettings_pbky3")
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 305.0
+offset_right = 202.0
+offset_bottom = 329.0
+theme_override_fonts/font = ExtResource("2_k1u7s")
+theme_override_font_sizes/font_size = 16
+text = "Back"
+
+[node name="bg" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 61.0
+offset_right = 91.0
+offset_bottom = 80.0
+theme_override_fonts/font = ExtResource("2_k1u7s")
+theme_override_font_sizes/font_size = 16
+text = "Music Vol:"
+
+[node name="music_vol_slider" type="HSlider" parent="."]
+offset_left = 117.0
+offset_top = 62.0
+offset_right = 314.0
+offset_bottom = 78.0
+min_value = -80.0
+max_value = 24.0
+value = -28.0
+
+[node name="Sound Effects" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 85.0
+offset_right = 110.0
+offset_bottom = 104.0
+theme_override_fonts/font = ExtResource("2_k1u7s")
+theme_override_font_sizes/font_size = 16
+text = "Sound FX Vol:"
+
+[node name="sfx_vol_slider" type="HSlider" parent="."]
+offset_left = 117.0
+offset_top = 86.0
+offset_right = 314.0
+offset_bottom = 102.0
+min_value = -80.0
+max_value = 24.0
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="drag_ended" from="music_vol_slider" to="." method="_on_music_vol_slider_drag_ended"]
+[connection signal="drag_ended" from="sfx_vol_slider" to="." method="_on_sfx_vol_slider_drag_ended"]

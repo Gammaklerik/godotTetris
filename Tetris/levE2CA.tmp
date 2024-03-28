@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1nlnfp65bmf0"]
+
+[ext_resource type="Script" path="res://Level.gd" id="1_7104u"]
+[ext_resource type="PackedScene" uid="uid://3c4p2vpoyeop" path="res://block_tilemap.tscn" id="2_1do7c"]
+[ext_resource type="PackedScene" uid="uid://dhykwbi33k28c" path="res://level_ui.tscn" id="3_wfv8q"]
+
+[node name="Level" type="Node2D" node_paths=PackedStringArray("ui")]
+script = ExtResource("1_7104u")
+ui = NodePath("Level_UI")
+
+[node name="Level_UI" parent="." instance=ExtResource("3_wfv8q")]
+
+[node name="Tilemap" parent="." instance=ExtResource("2_1do7c")]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwhvv6sks7hxm"]
+
+[ext_resource type="AudioStream" uid="uid://bhw5mxo87pwj" path="res://assets/SFX/piece_land.ogg" id="1_2e4l2"]
+
+[node name="piece_land_sfx" type="AudioStreamPlayer" groups=["SFX"]]
+stream = ExtResource("1_2e4l2")

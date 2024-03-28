@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://baxdont5w0wfm"]
+
+[ext_resource type="AudioStream" uid="uid://dmpfmpk3m1vq1" path="res://assets/SFX/line_clear.ogg" id="1_liocp"]
+
+[node name="line_clear_sfx" type="AudioStreamPlayer" groups=["SFX"]]
+stream = ExtResource("1_liocp")

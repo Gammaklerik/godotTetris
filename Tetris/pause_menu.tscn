@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfsjtcw2g26fc"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_p7oyf"]
+[ext_resource type="FontFile" uid="uid://i8se1bgmuane" path="res://assets/fonts/Workbench-Regular.ttf" id="2_p33kh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f3gmp"]
+font = ExtResource("2_p33kh")
+font_size = 43
+font_color = Color(0, 0.776471, 0, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Pause_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p7oyf")
+
+[node name="paused" type="Label" parent="."]
+offset_left = 69.0
+offset_top = 15.0
+offset_right = 267.0
+offset_bottom = 59.0
+text = "Paused"
+label_settings = SubResource("LabelSettings_f3gmp")
+horizontal_alignment = 1
+
+[node name="restart" type="Button" parent="."]
+offset_left = 109.0
+offset_top = 118.0
+offset_right = 230.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("2_p33kh")
+theme_override_font_sizes/font_size = 23
+text = "Restart?"
+
+[node name="resume" type="Button" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 74.0
+offset_right = 220.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("2_p33kh")
+theme_override_font_sizes/font_size = 23
+text = "Resume"
+
+[node name="options" type="Button" parent="."]
+offset_left = 121.0
+offset_top = 158.0
+offset_right = 210.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("2_p33kh")
+theme_override_font_sizes/font_size = 20
+text = "Options"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 124.0
+offset_top = 299.0
+offset_right = 209.0
+offset_bottom = 328.0
+theme_override_fonts/font = ExtResource("2_p33kh")
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[connection signal="pressed" from="restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://3c4p2vpoyeop"]
+[gd_scene load_steps=3 format=3 uid="uid://3c4p2vpoyeop"]
 
 [ext_resource type="TileSet" uid="uid://l5l4ank1ejgo" path="res://assets/sprites/new_blocks.tres" id="1_fbqq3"]
 [ext_resource type="Script" path="res://block_tilemap.gd" id="2_rd7ws"]
-[ext_resource type="PackedScene" uid="uid://demu81n75q5ii" path="res://block_controller.tscn" id="3_6wo46"]
 
-[node name="Level" type="TileMap"]
+[node name="Tilemap" type="TileMap"]
+position = Vector2(72, 0)
 tile_set = ExtResource("1_fbqq3")
 format = 2
 layer_0/name = "bg"
@@ -13,4 +13,8 @@ layer_1/name = "fg"
 layer_1/tile_data = PackedInt32Array(0, 458752, 0, 65536, 458752, 0, 131072, 458752, 0, 196608, 458752, 0, 262144, 458752, 0, 327680, 458752, 0, 393216, 458752, 0, 458752, 458752, 0, 524288, 458752, 0, 589824, 458752, 0, 655360, 458752, 0, 720896, 458752, 0, 786432, 458752, 0, 11, 458752, 0, 65547, 458752, 0, 131083, 458752, 0, 196619, 458752, 0, 262155, 458752, 0, 327691, 458752, 0, 393227, 458752, 0, 458763, 458752, 0, 524299, 458752, 0, 589835, 458752, 0, 655371, 458752, 0, 720907, 458752, 0, 786443, 458752, 0, 851968, 458752, 0, 917504, 458752, 0, 983040, 458752, 0, 1048576, 458752, 0, 1114112, 458752, 0, 1179648, 458752, 0, 1245184, 458752, 0, 1310720, 458752, 0, 851979, 458752, 0, 917515, 458752, 0, 983051, 458752, 0, 1048587, 458752, 0, 1114123, 458752, 0, 1179659, 458752, 0, 1245195, 458752, 0, 1310731, 458752, 0, 1310721, 458752, 0, 1310722, 458752, 0, 1310723, 458752, 0, 1310724, 458752, 0, 1310725, 458752, 0, 1310726, 458752, 0, 1310727, 458752, 0, 1310728, 458752, 0, 1310729, 458752, 0, 1310730, 458752, 0)
 script = ExtResource("2_rd7ws")
 
-[node name="block_controller" parent="." instance=ExtResource("3_6wo46")]
+[node name="fall_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="fall_timer" to="." method="_on_fall_timer_timeout"]

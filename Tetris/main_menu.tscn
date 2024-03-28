@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckv6yj4knxk3y"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_bfnsa"]
+[ext_resource type="FontFile" uid="uid://i8se1bgmuane" path="res://assets/fonts/Workbench-Regular.ttf" id="1_w3khk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eqbrf"]
+font = ExtResource("1_w3khk")
+font_size = 34
+outline_size = 1
+outline_color = Color(0, 0.776471, 0, 1)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfnsa")
+
+[node name="funny_blocks" type="Label" parent="."]
+layout_mode = 0
+offset_top = 46.0
+offset_right = 336.0
+offset_bottom = 84.0
+text = "Funny Blocks"
+label_settings = SubResource("LabelSettings_eqbrf")
+horizontal_alignment = 1
+
+[node name="new_game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 103.0
+offset_right = 213.0
+offset_bottom = 132.0
+theme_override_fonts/font = ExtResource("1_w3khk")
+theme_override_font_sizes/font_size = 20
+text = "New Game"
+
+[node name="options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 141.0
+offset_right = 213.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("1_w3khk")
+theme_override_font_sizes/font_size = 20
+text = "Options"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 303.0
+offset_right = 214.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("1_w3khk")
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+
+[connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
